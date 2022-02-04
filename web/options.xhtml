@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Options</title>
+    </h:head>
+    <h:body>
+        <h1>
+            Welcome
+            <h:outputLabel for="txtName">
+                <h:outputText id="name" value="#{blood.name}"/>
+            </h:outputLabel>
+        </h1>
+        <h:form>
+            <h2>
+                Choose any one option     
+            </h2>
+            <br></br>
+            <h:commandButton id="cmdDonate" value="DONATE" action="#{blood.donate}" />
+            <br></br><br></br>
+            <h:commandButton id="cmdRecv" value="RECEIVE" action="#{blood.recv}" />
+            <br></br><br></br>
+            <h:commandButton id="cmdMain" value="LOGOUT" action="#{blood.ind}" />
+            
+        </h:form>
+    </h:body>
+</html>
+

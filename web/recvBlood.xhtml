@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Blood Bank</title>
+    </h:head>
+    <h:body>
+        
+        <h1>ABC Blood Bank</h1>
+        
+        <h:form>
+            <h:outputLabel for="txtGrp" >
+                <h:outputText value="Enter Blood Group you need:"/>     
+            </h:outputLabel>
+            <h:selectOneRadio id="grp" required="true" requiredMessage="please choose your blood group to proceed" value="#{blood.newbloodgrp}">
+                <f:selectItem itemValue="#{blood.grpAp}" itemLabel="A+ve"/>
+                <f:selectItem itemValue="#{blood.grpAn}" itemLabel="A-ve"/>
+                <f:selectItem itemValue="#{blood.grpBp}" itemLabel="B+ve"/>
+                <f:selectItem itemValue="#{blood.grpBn}" itemLabel="B-ve"/>
+                <f:selectItem itemValue="#{blood.grpABp}" itemLabel="AB+ve"/>
+                <f:selectItem itemValue="#{blood.grpABn}" itemLabel="AB-ve"/>
+                <f:selectItem itemValue="#{blood.grpOp}" itemLabel="O+ve"/>
+                <f:selectItem itemValue="#{blood.grpOn}" itemLabel="O-ve"/>
+            </h:selectOneRadio>
+            <br></br>
+            <br></br>
+            <h:outputLabel for="txtUnits" >
+                <h:outputText value="Enter Number of Units you need:"/>     
+            </h:outputLabel>
+            <h:inputText id="txtUnits" value="#{blood.newunits}" />
+            <br></br>
+            <br></br>
+            <h:commandButton id="cmdrecvUnits" value="Get" action="#{blood.bloodRecv}" />
+
+            <h:outputLabel for="txtmsg">
+                <h:outputText value="#{blood.msg3}"/>
+            </h:outputLabel>
+            <br></br>
+            <br></br>
+        </h:form>
+        
+        <h:form>
+            <h:commandButton id="cmdBOption" value="Back to options" action="#{blood.opt}" />
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:commandButton id="cmdUnits" value="Display Availability" action="#{blood.bloodAvail}" />
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:outputLabel for="txtmsg1">
+                <h:outputText value="#{blood.grp1}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg2">
+                <h:outputText value="#{blood.grp2}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg3">
+                <h:outputText value="#{blood.grp3}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg4">
+                <h:outputText value="#{blood.grp4}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg5">
+                <h:outputText value="#{blood.grp5}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg6">
+                <h:outputText value="#{blood.grp6}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg7">
+                <h:outputText value="#{blood.grp7}"/>
+            </h:outputLabel>
+            <br></br>
+            <h:outputLabel for="txtmsg8">
+                <h:outputText value="#{blood.grp8}"/>
+            </h:outputLabel>
+            
+        </h:form>
+    </h:body>
+</html>
+
